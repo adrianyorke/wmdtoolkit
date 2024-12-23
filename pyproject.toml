@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools", "toml"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wmdtoolkit"
+description = "Wealth Management Data Toolkit library used to implement common data engineering utility functions and classes"
+authors = [
+    { name = "Adrian Yorke" },
+    { name = "Juuso Torikka" },
+]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+readme = "README.md"
+requires-python = ">=3.9.5"
+keywords = ["data-engineering", "toolkit"]
+dynamic = ["version"]
+license = { text = "Proprietary software." }
+dependencies = [
+    "pip",
+    "setuptools",
+    "wheel",
+    "pyspark==3.5.0",
+    "pyyaml",
+    "toml",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "wmdtoolkit.__version__"}
+
+# [project.otional-dependencies]
+# doc = ["sphinx>=1.8.5", "mock", "atlassian-python-api"]
+
+# test = ["coverage", "flake8", "pytest"]
